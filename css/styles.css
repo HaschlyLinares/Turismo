@@ -1,0 +1,599 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilo de la cabecera  */
+
+header{
+    width: 100%;
+    padding: 40px 0 0 0;
+    background: url("../img/bg-header.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+    
+}
+
+header nav{
+    width: 92%;
+    height: 60px; 
+    /* background: red;   */
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+header nav ul{
+    display:flex;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0  12px;
+    /* background: #7b0404; */
+}
+
+nav li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 400px;
+    /* background: #7b0404; */
+    transition: .5s;
+}
+
+nav li a:hover{
+    border-bottom: 2px solid #ffffff;
+    border-top: 2px solid rgb(251, 251, 251);
+}
+
+#hero{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto ; 
+    padding-top: 130px;
+    /* background: red; */
+}
+
+
+#hero h2{
+    font-size: 50px;
+    color: rgb(254, 250, 0);
+}
+
+#hero h1{
+    font-size: 20px;
+    color: rgb(0, 255, 242);
+    font-weight: 500;
+    margin-bottom: 90px;
+    text-transform: uppercase;
+}
+
+#hero button{
+    background: rgb(242, 242, 5);
+    font-size: 30px;
+    padding: 12px 30px ;
+    border-radius: 14px;
+    color:#000000;
+    border-color: transparent;
+    transition: .5s;
+    cursor: pointer;
+    display:block;
+    box-shadow: 5px 5px 4px 3px rgb(0, 0, 0);
+    max-width: 220px;
+    margin: 20px auto;
+    text-decoration: none;
+    
+    
+}
+
+
+#hero button:hover{
+
+    transform: scale(1.1);
+    background: #000000;
+    color:#fff;
+    box-shadow: 5px 5px 4px 3px white ;
+}
+#logo img{
+    transition: .5s;
+    border-radius: 20px;
+    width: 150px;
+    height: auto;
+
+}
+
+#logo img:hover{
+    transform: scale(1.1);
+
+}
+
+#hero img{
+    
+    width: 80px;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+#hero img:hover{
+    transform: rotate(360deg);
+}
+
+/* Estilo de destino */
+
+#destino{
+    background: url("../img/bg-fin.avif");
+    text-align: center;
+    width: 100%;
+    background-size: 400px;
+    
+}
+.destino_container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px; 
+    gap: 1em;
+    align-items: center;
+}
+#destino h1{
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #0000ff;
+    
+}
+
+.destino_body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}  
+
+.destino_body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+
+}
+
+.destino_img{
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+    border: 3px solid #0000ff;
+    object-fit: cover;
+    object-position: 50% 30%;
+} 
+
+.destino_texts{
+    max-width: 500;
+} 
+
+.destino_course{
+    
+    color: #000000;
+    display: inline-block;
+    padding: 5px;
+} 
+
+.destino_arrow{
+    width: 90%;
+    cursor: pointer;
+}
+
+
+/* ESTILOS PLANES */
+
+main{
+    width: 100%;
+    position: relative;
+
+}
+#planes{
+    background: url("../img/bg-fin2.jpg");
+    text-align: center;
+    width: 100%;
+    background-size: 400px;
+    background-size: cover;
+
+}
+
+#planes h2{
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #0000ff;
+
+}
+
+#planes p{
+    font-size: 20px;
+}
+
+#planes .fila{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 80px;
+    justify-content: space-evenly;
+}
+
+#planes .col-plan{
+    position: relative;
+}
+
+#planes .fila h3{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgb(0, 8, 255);
+    z-index: 10;
+}
+
+#planes .col-plan img{
+    transition: .5s;
+    width: 200px;
+    cursor: pointer;
+
+}
+#planes .col-plan img:hover{
+    border-radius: 50%;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 4px 3px rgb(0, 0, 0) ;
+    
+}
+
+/* video */
+
+#video{
+    width: 100%;
+    position: relative;
+    background: url("../img/bg-fin2.jpg");
+    text-align: center;
+    padding-top: 105px;
+    background-size: cover;
+    padding-bottom: 110px;
+    background-size: cover;
+
+}
+
+#video h2{
+    color: #0000ff;
+    font-size: 35px;
+}
+#video p{
+    font-size: 20px;
+}
+
+#video .filo{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 80px;
+    justify-content: space-around;
+}
+
+
+/* ESTILOS DE HOTELES */
+
+#hotel{
+    width: 100%;
+    padding: 40px 0 0 0;
+    background: url("../img/bg-fin.avif");
+    background-size: cover;
+    
+}
+#hotel p {
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+#hotel h2{
+    font-size: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: rgb(0, 4, 255);
+
+}
+
+#hotel .fila{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 45px;
+    justify-content: space-evenly;
+}
+
+#hotel h3{
+    color: #000000;
+    text-align: center;
+}
+
+#hotel .h-hotel img{
+    transition: .5s;
+    width: 150px;
+    cursor: pointer;
+    
+}
+
+#hotel .h-hotel img:hover{
+    transform: scale(1.1);
+    border-radius: 10%;
+    box-shadow: 5px 5px 4px 3px rgb(0, 0, 0) ;
+}
+
+/* estilo vuelo*/
+
+#vuelos{
+    background: url("../img/bg-fin2.jpg");
+    text-align: center;
+    width: 100%;
+    background-size: 300px;
+    position: relative;
+    background-size: cover;
+    
+    
+}
+
+#vuelos h2{
+    font-size: 40px;
+    color: blue;
+}
+
+#vuelos p{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#vuelos form{
+    width: 80%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+#vuelos .fila{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+#vuelos input,
+#vuelos select{
+    width: 48%;
+    padding: 12px 20px;
+    margin: 10px 0;
+
+}
+
+#vuelos button{
+    background: rgb(21, 0, 255);
+    font-size: 15px;
+    padding: 12px 30px ;
+    border-radius: 14px;
+    color:#ffffff;
+    transition: .5s;
+    display:block;
+    box-shadow: 5px 5px 4px 3px rgb(0, 0, 0);
+    margin: 20px auto;
+    cursor: pointer;
+
+}
+
+#vuelos button:hover{
+    transform: scale(1.1);
+    background: #000000;
+    color:#fff;
+    box-shadow: 5px 5px 4px 3px rgb(255, 0, 0) ;
+}
+
+/* conctacto */
+
+#contacto{
+    width: 100%;
+    position: relative;
+    background: url("../img/bg-fin.avif");
+    text-align: center;
+    padding-top: 105px;
+    background-size: cover;
+    padding-bottom: 110px;
+    
+}
+
+
+#contacto h2{
+    font-size: 50px;
+    color: #0000ff;
+}
+
+#contacto p{
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#contacto form{
+    width: 80%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+#contacto .fila{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+#contacto input,
+#contacto select{
+    width: 48%;
+    padding: 12px 20px;
+    margin: 10px 0;
+
+}
+
+#contacto button{
+    background: rgb(0, 21, 255);
+    font-size: 25px;
+    padding: 7px 40px ;
+    border-radius: 14px;
+    color:#ffffff;
+    transition: .5s;
+    display:block;
+    box-shadow: 5px 5px 4px 3px rgb(0, 0, 0);
+    margin: 20px auto;
+    cursor: pointer;
+
+}
+
+#contacto button:hover{
+    transform: scale(1.1);
+    background: #000000;
+    color:#fff;
+    box-shadow: 5px 5px 4px 3px rgb(255, 0, 0) ;
+}
+
+/* mapa */
+#mapa{
+    width: 100%;
+    position: relative;
+    background: url("../img/bg-fin2.jpg");
+    text-align: center;
+    padding-top: 105px;
+    background-size: cover;
+    padding-bottom: 110px;
+
+}
+
+#mapa h2{
+    color: #0000ff;
+}
+
+
+
+
+
+/* footer */
+footer{
+    padding: 30px;
+    background: #898888;
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+}
+
+footer .ico{
+    text-align: center ;
+    cursor: pointer;
+}
+
+footer p{
+    text-align: left;
+}
+
+footer h3{
+    text-align: right;
+}
+
+
+
+
+
+/* ... */
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* table
+@media screen and  (min-width: 768px) and (max-width: 990px) {
+    header{
+        background: red;
+    }
+
+} */
+   /* celular */
+/* @media screen and  (min-width: 320px) and (max-width: 767px) {
+    header nav{
+        display: block;
+        text-align: center;
+        width: 96%;
+
+    }
+
+    header nav ul{
+        margin-top: 30px;
+    }
+
+    nav li a{
+        font-size: 20px;
+    }
+
+    #hero h2{
+        font-size: 36px;
+    }
+
+    #hero h1{
+        font-size: 26px;
+    }
+
+    #hero button{
+        font-size: 18px;
+        padding: 8px 14px;
+    }
+
+    #planes .fila{
+        display:block;
+    
+    }
+
+    #planes h2{
+        font-size: 36px;
+    }
+
+    #planes p{
+        font-size: 16px;
+    }
+
+    #planes .col-plan{
+        margin-bottom: 30px;
+    }
+
+    #destinos .fila{
+        display: block;
+    }
+
+    #contacto .fila{
+        display: block;
+    }
+
+    #contacto input,
+    #contacto select{
+        width: 100%;
+        display: block;
+    }
+} */
